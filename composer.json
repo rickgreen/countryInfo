@@ -1,0 +1,15 @@
+{
+    "name": "rickgreen/voeding.metrick.nl",
+    "description": "Voeding BLOG",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Rick Green",
+            "email": "hallo@metrick.nl"
+        }
+    ],
+    "require": {
+        "twig/twig": "^2.11",
+        "vlucas/phpdotenv": "^3.6"
+    }
+}

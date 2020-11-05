@@ -1,0 +1,38 @@
+/* 
+Font pairing at https://fontjoy.com/ 
+
+Also choose a monospace font
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro|Trirong|Varela+Round|Yantramanav&display=swap');
+
+/* Base font is the sans-serif font */
+html,
+body {
+    font-family: 'Yantramanav', sans-serif;
+}
+
+
+/* Here the monospace font  */
+pre,
+code {
+    font-family: 'Anonymous Pro', monospace;
+}
+
+
+/* First header has first serif font  */
+
+h1 {
+    font-family: 'Trirong', serif;
+}
+
+
+/* All other headers have second serif font */
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Varela Round', sans-serif;
+}
