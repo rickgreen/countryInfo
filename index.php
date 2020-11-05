@@ -18,6 +18,9 @@ switch ($request) {
         echo $twig->render('views/signin.twig');
         break;
 
+    case '/country':
+        echo $twig->render('views/country.twig');
+        break;
 
     default:
         echo $twig->render('views/404.twig');

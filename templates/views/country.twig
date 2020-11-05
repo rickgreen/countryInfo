@@ -1,0 +1,68 @@
+{% set page_title = 'country' %}
+
+{% extends "base.twig" %}
+
+{% block css %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" integrity="sha512-gxWow8Mo6q6pLa1XH/CcH8JyiSDEtiwJV78E+D+QP0EVasFs8wKXq16G8CLD4CJ2SnonHr4Lm/yY2fSI2+cbmw==" crossorigin="anonymous" />
+
+    <style>
+
+        // workaround
+        .intl-tel-input {
+            display: table-cell;
+            }
+        .intl-tel-input .selected-flag {
+            z-index: 4;
+            }
+        .intl-tel-input .country-list {
+            z-index: 5;
+            }
+        .input-group .intl-tel-input .form-control {
+            border-top-left-radius: 4px;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 0;
+            }
+    </style>
+{% endblock %}
+
+{% block contents %}
+
+
+    <div class="row mt-4">
+        <div class="col col-md-8 offset-md-2">
+
+
+            <input type="tel" id="phone">
+
+
+
+        </div>
+    </div>
+
+
+{% endblock %}
+
+
+
+{% block js %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js" integrity="sha512-DNeDhsl+FWnx5B1EQzsayHMyP6Xl/Mg+vcnFPXGNjUZrW28hQaa1+A4qL9M+AiOMmkAhKAWYHh1a+t6qxthzUw==" crossorigin="anonymous"></script>
+{#    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.min.js" integrity="sha512-ufUV+vuYIp8gMzUa1sHW3K1BKQjNtUEM9y4icCXB4gPObPQXVyn4bpmVNDbmuWBgcJ3nlNoCBG/ZPn5GIAPuvA==" crossorigin="anonymous"></script>#}
+
+    <script>
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            // any initialisation options go here
+            onlyCountries: ["al", "ad", "at", "by", "be", "ba", "bg", "hr", "cz", "dk",
+                "ee", "fo", "fi", "fr", "de", "gi", "gr", "va", "hu", "is", "ie", "it", "lv",
+                "li", "lt", "lu", "mk", "mt", "md", "mc", "me", "nl", "no", "pl", "pt", "ro",
+                "ru", "sm", "rs", "sk", "si", "es", "se", "ch", "ua", "gb"],
+            preferredCountries: ['nl', 'de', 'be'],
+            separateDialCode: true,
+            hiddenInput: "full",
+            localizedCountries : { 'de': 'Deutschland', 'nl' : 'Nederland', 'be' : 'Belgiê / Belgique' },
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.min.js"
+        });
+    </script>
+
+{% endblock %}
